@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author 
+ * @author  dwz
  */
 public class Positions implements Serializable {
     private Integer id;

@@ -3,7 +3,7 @@ package com.dwz.xietongoa.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 /**
- * @Author: DWZ
+ * @Author: dwz
  * @Date: 2020/4/9 22:49
  * 主页的Controller
  */

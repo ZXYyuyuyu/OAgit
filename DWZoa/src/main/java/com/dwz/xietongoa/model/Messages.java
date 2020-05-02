@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author 
+ * @author dwz
  */
 public class Messages implements Serializable {
     private Integer id;

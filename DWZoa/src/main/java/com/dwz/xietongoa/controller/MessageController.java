@@ -19,7 +19,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
- * @author DWZ
+ * @author dwz
  * @date 2020/4/1521:41
  * 站内信
  */
