@@ -391,3 +391,8 @@ Verify the connector's configuration, identify and stop any process that's liste
 
 2020-05-02 14:40:16.006 [restartedMain] WARN  o.s.c.annotation.CommonAnnotationBeanPostProcessor - Invocation of destroy method failed on bean with name 'org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration': java.lang.NullPointerException
 2020-05-02 14:47:56.133 [Thread-135] WARN  o.s.c.annotation.CommonAnnotationBeanPostProcessor - Invocation of destroy method failed on bean with name 'org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration': java.lang.NullPointerException
+2020-05-02 14:48:10.518 [restartedMain] WARN  o.s.c.netflix.archaius.ArchaiusAutoConfiguration - Netflix ConfigurationManager has already been installed, unable to re-install
+2020-05-02 14:48:12.687 [restartedMain] WARN  o.s.w.servlet.resource.ResourceHttpRequestHandler - Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2020-05-02 14:48:12.687 [restartedMain] WARN  o.s.w.servlet.resource.ResourceHttpRequestHandler - Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2020-05-02 14:48:17.925 [restartedMain] WARN  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with key 'zuulEndpoint' has been registered as an MBean but has no exposed attributes or operations
+2020-05-02 14:48:18.054 [http-nio-8080-exec-1] WARN  o.s.cloud.netflix.zuul.web.ZuulHandlerMapping - No routes found from RouteLocator
