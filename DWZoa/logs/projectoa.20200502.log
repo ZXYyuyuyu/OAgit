@@ -13,3 +13,8 @@
 2020-05-02 10:50:02.003 [restartedMain] WARN  o.s.w.servlet.resource.ResourceHttpRequestHandler - Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
 2020-05-02 10:50:13.195 [restartedMain] WARN  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with key 'zuulEndpoint' has been registered as an MBean but has no exposed attributes or operations
 2020-05-02 10:50:14.330 [http-nio-8080-exec-1] WARN  o.s.cloud.netflix.zuul.web.ZuulHandlerMapping - No routes found from RouteLocator
+2020-05-02 11:17:22.381 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-05-02 11:17:27.335 [restartedMain] WARN  o.s.w.servlet.resource.ResourceHttpRequestHandler - Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2020-05-02 11:17:27.336 [restartedMain] WARN  o.s.w.servlet.resource.ResourceHttpRequestHandler - Locations list is empty. No resources will be served unless a custom ResourceResolver is configured as an alternative to PathResourceResolver.
+2020-05-02 11:17:39.597 [restartedMain] WARN  o.s.jmx.export.annotation.AnnotationMBeanExporter - Bean with key 'zuulEndpoint' has been registered as an MBean but has no exposed attributes or operations
+2020-05-02 11:17:40.120 [http-nio-8080-exec-1] WARN  o.s.cloud.netflix.zuul.web.ZuulHandlerMapping - No routes found from RouteLocator
