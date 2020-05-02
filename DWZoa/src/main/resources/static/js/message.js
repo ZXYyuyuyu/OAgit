@@ -84,7 +84,7 @@ function initReceives() {
 }
 
 /**
- * 发送站内信 支持群发
+ * 发送消息 支持群发
  */
 function sendMessage() {
     var userIDs = $('#receives').val().toString();
@@ -150,7 +150,7 @@ function getMessages(pageNum) {
                 vm_message.pageInfo.isLastPage = result.value.isLastPage;
                 vm_message.pageNum = result.value.pageNum;
             } else {
-                showAlert("获取站内信异常!")
+                showAlert("获取消息异常!")
             }
         }
     });

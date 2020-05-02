@@ -41,7 +41,7 @@ function getNotices(pageNum) {
                 vm_notice.pageInfo.isLastPage = result.value.isLastPage;
                 vm_notice.pageNum = result.value.pageNum;
             } else {
-                showAlert("获取站内信异常!")
+                showAlert("获取消息异常!")
             }
         }
     });

@@ -160,7 +160,7 @@ function GetLunarDay(solarYear,solarMonth,solarDay){
 }
 
 /**
- * 获取最新站内信
+ * 获取最新消息
  */
 function getLastMessage() {
     $.ajax({

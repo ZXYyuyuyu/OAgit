@@ -21,7 +21,7 @@ import java.util.Objects;
 /**
  * @author dwz
  * @date 2020/4/1521:41
- * 站内信
+ * 消息
  */
 @Controller
 @RequestMapping(value = "/message")
@@ -34,7 +34,7 @@ public class MessageController {
     RedisService redisService;
 
     /**
-     * 站内信箱
+     * 消息
      */
     @RequestMapping(value = "/message")
     public String message() {
@@ -42,7 +42,7 @@ public class MessageController {
     }
 
     /**
-     * 站内信详情
+     * 消息详情
      */
     @RequestMapping(value = "/message_dtl/{id}")
     public String message_dtl() {
@@ -50,7 +50,7 @@ public class MessageController {
     }
 
     /**
-     * 发送站内信
+     * 发送消息
      */
     @RequestMapping(value = "/send_message")
     @ResponseBody
@@ -67,16 +67,19 @@ public class MessageController {
             int messageID = messageService.insertMessage(messages);
             String unReadMessageIDs = redisService.getValue("message_" + receiveId);
             if (Objects.isNull(unReadMessageIDs) || "null".equals(unReadMessageIDs))
+            {
                 unReadMessageIDs = String.valueOf(messageID);
-            else
+            }
+            else{
                 unReadMessageIDs += "," + messageID;
+            }
             redisService.setValue("message_" + receiveId, unReadMessageIDs);
         }
         return ReturnDto.buildSuccessReturnDto("success");
     }
 
     /**
-     * 返回特别定制的所有用户信息给用户选择站内信发给谁
+     * 返回特别定制的所有用户信息给用户选择消息发给谁
      */
     @RequestMapping(value = "/getAllUser")
     @ResponseBody
@@ -118,8 +121,9 @@ public class MessageController {
         if (!Objects.isNull(unReadMessageIDs) && !"null".equals(unReadMessageIDs)) {
             list = JSONUtil.String2List(unReadMessageIDs);
         }
-        if(!list.contains(messageID))
+        if(!list.contains(messageID)) {
             return ReturnDto.buildFailedReturnDto("这条信息不存在");
+        }
         list.remove(messageID);
         unReadMessageIDs = JSONUtil.List2String(list);
         redisService.setValue("message_" + userID, unReadMessageIDs);

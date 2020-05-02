@@ -59,8 +59,8 @@ public class NoticeController {
     }
 
     /**
-     * 发送站内信
-     * 这里接收到站内信后
+     * 发送消息
+     * 这里接收到消息后
      * 存数据库
      * 加入所有人的redis
      */
@@ -138,8 +138,9 @@ public class NoticeController {
         if (!Objects.isNull(unReadNoticeIDs) && !"null".equals(unReadNoticeIDs)) {
             list = JSONUtil.String2List(unReadNoticeIDs);
         }
-        if(!list.contains(noticeID))
+        if(!list.contains(noticeID)) {
             return ReturnDto.buildFailedReturnDto("这条信息不存在");
+        }
         list.remove(noticeID);
         unReadNoticeIDs = JSONUtil.List2String(list);
         redisService.setValue("notice_" + userID, unReadNoticeIDs);

@@ -18,7 +18,7 @@ function getNoticeDtl() {
                 //最后他打开了这条 就把这条从未读里删除
                 setIsRead(result.value.id);
             }else{
-                showAlert("获取站内信异常!")
+                showAlert("获取消息异常!")
             }
         }
     });
