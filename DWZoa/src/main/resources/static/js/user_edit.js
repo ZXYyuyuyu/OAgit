@@ -77,7 +77,7 @@ function editUser() {
     //用户名正则，4到16位（字母，数字，下划线，减号）
     var uPattern = /^[a-zA-Z0-9_-]{6,20}$/;
     if (realname == '' || realname == null){
-        showAlert('请输入员工姓名:');
+        showAlert('请输入员工姓名');
     }else{
         //发送创建用户请求
         var data = {};
@@ -93,7 +93,7 @@ function editUser() {
             success: function(result){
                 if (result.code == 000){
                     //成功
-                    showAlert('修改成功!');
+                    showAlert('修改成功');
                 }else {
                     //失败
                     showAlert(result.message);

@@ -3,18 +3,17 @@ package com.dwz.xietongoa.controller;
 import com.dwz.xietongoa.dto.ReturnDto;
 import com.dwz.xietongoa.util.ReadFileUtil;
 import org.springframework.beans.factory.annotation.Value;
-//import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author DWZ
  * @date 2020/4/18 16:24
  * 在页面标签栏里显示日志文件
  */
-@RestController
+@Controller
 @RequestMapping(value = "/admin")
 public class AdminController {
     //这两个参数从application.properties获取

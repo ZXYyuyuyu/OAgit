@@ -56,7 +56,7 @@ function createUser() {
     if (!uPattern.test(username)){
         showAlert('用户名必须是数字或者字母,长度为6-20字符之间,请重新输入','您输入的用户名不正确');
     }else if (realname == '' || realname == null){
-        showAlert('请输入员工姓名:');
+        showAlert('请输入员工姓名');
     }else{
         //发送创建用户请求
         var data = {};
@@ -73,7 +73,7 @@ function createUser() {
             success: function(result){
                 if (result.code == 000){
                     //成功
-                    showAlert('创建成功!');
+                    showAlert('创建成功');
                 }else {
                     //失败
                     showAlert(result.message);
