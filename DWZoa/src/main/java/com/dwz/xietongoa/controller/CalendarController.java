@@ -16,7 +16,7 @@ public class CalendarController {
     private RedisService redisService;
 
     /**
-     * 日历
+     * 日程表
      */
     @RequestMapping(value = "/calendar")
     public String calendar() {
@@ -24,7 +24,7 @@ public class CalendarController {
     }
 
     /**
-     * 缓存日志备注
+     * 缓存日程表备注
      * key是 calendar加userID
      * value是 JSON格式备注
      */
@@ -37,7 +37,7 @@ public class CalendarController {
     }
 
     /**
-     * 获取日志备注
+     * 获取日程表备注
      * key是 calendar加userID
      * return是 JSON格式备注
      */
